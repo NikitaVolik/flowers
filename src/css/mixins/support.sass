@@ -1,0 +1,70 @@
+@use 'mixins.sass' as *
+
+$f-thin: 100
+$f-extralignt: 200
+$f-light: 300
+$f-normal: 400
+$f-medium: 500
+$f-semibold: 600
+$f-bold: 700
+$f-extrabold: 800
+$f-black: 900
+
+.center
+  +center()
+
+.flex
+  display: flex
+
+.column
+  display: flex
+  flex-direction: column
+
+.row
+  display: flex
+  flex-direction: row
+
+.space-between
+  +space-between()
+
+.justify-center
+  +justify-center()
+
+.align-center
+  +align-center()
+
+.align-start
+  +align-start()
+
+.align-end
+  +align-end()
+
+.row-reverse
+  +row-reverse()
+
+.column-reverse
+  +column-reverse()
+
+.bold
+  font-weight: 700
+
+.m0
+  +m0()
+
+.relative
+  position: relative
+
+.absolute
+  position: absolute
+
+.hide-on-mobile
+  +mobiles()
+    display: none
+  +phone()
+    display: none
+
+.show-on-mobile
+  +mobiles()
+    display: flex !important
+  +phone()
+    display: flex !important

@@ -1,0 +1,46 @@
+@forward './mixins/my_normalize.sass'
+@use './mixins/colors.sass' as *
+@use './mixins/support.sass' as *
+@use './mixins/mixins.sass' as *
+@use './mixins/fonts.sass' as *
+
+html
+  background-color: #F5F5F5
+
+body
+  color: $black
+  background-color: white
+  +font($inter, 24px)
+  width: 1800px
+  margin: 0 auto
+
+h1
+  +font($roboto-flex, 84px)
+  color: $brown
+  text-align: center
+  padding-top: 414px
+  padding-left: 480px
+
+.container
+  width: 1400px
+  margin: 0 auto
+
+.header
+  color: white
+  background-color: $black
+  height: 100px
+  img
+    width: 305px
+  .menu
+    ul
+      gap: 20px
+
+.hero
+  background-image: url('../img/hero.jpg')
+  height: 902px
+
+.info
+  gap: 80px
+  padding: 80px 0
+  .description
+    gap: 28px

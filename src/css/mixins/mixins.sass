@@ -1,0 +1,99 @@
+
+  
+//- Breakpoint
+  
+$phone: 576px  //- телефон
+$mobiles: 768px  //- горизонтальный телефон и вертикальный планшет
+$tablet: 1024px  //- планшет
+$desktop: 1200px //- компьютер
+$desktop-xl: 1400px //- большой экран
+  
+=phone()
+  @media (max-width: $phone)
+    @content
+
+=mobiles()
+  @media (max-width: $mobiles)
+    @content
+
+=tablet()
+  @media (max-width: $tablet)
+    @content
+
+=desktop()
+  @media (max-width: $desktop)
+    @content
+
+=desktop-xl()
+  @media (max-width: $desktop-xl)
+    @content
+
+//- Flex
+
+=flex()
+  display: flex
+
+=row()
+  display: flex
+  flex-direction: row
+
+=column()
+  display: flex
+  flex-direction: column
+
+=space-between()
+  display: flex
+  justify-content: space-between
+
+=justify-center()
+  display: flex
+  justify-content: center
+
+=align-center()
+  display: flex
+  align-items: center
+
+=align-start()
+  display: flex
+  align-items: start
+
+=align-end()
+  display: flex
+  align-items: end
+
+=row-reverse()
+  display: flex
+  flex-direction: row-reverse
+
+=column-reverse
+  display: flex
+  flex-direction: column-reverse
+
+
+//- Aligments
+
+=center()
+  // text-align: center
+  margin: 0 auto
+
+
+//- Background
+
+=bg($color)
+  background-color: $color 
+
+
+//- Fonts
+
+=font($font, $size: 16px, $weight: 400)
+  font-family: $font
+  font-optical-sizing: auto
+  font-size: $size
+  font-weight: $weight
+  font-style: normal
+
+=lh($height)
+  line-height: $height
+
+=m0()
+  margin: 0

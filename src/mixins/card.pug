@@ -1,0 +1,9 @@
+mixin card(image, text, link, class_name)
+    a(class=class_name, href=link)
+        div(class=class_name)
+            .img
+                img(src=image, alt=text)
+            .flex.space-between.align-center
+                h3= text
+                img.arrow(src='./img/arrow.svg', alt='arrow')
+            p Explore Now!

@@ -1,0 +1,24 @@
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./css/style.css")
+    title Document
+    include button
+    include card
+body 
+    section.nav-area.container.space-between.align-center
+        .logo-area.flex.align-center
+            img(src="./img/logo.svg", alt="")
+            p fashion
+        .burger.align-center.show-on-mobile
+            img(src="./img/menu.svg", alt="")
+        .menu.flex.align-center.hide-on-mobile
+            a(href="#") CATALOGUE
+            a(href="#") FASHION
+            a(href="#") FAVOURITE
+            a(href="#") LIFESTYLE
+            +button('SIGN UP', '#', 'button')
+    section.hero-block
+        .container.relative
+            +button('Shop Now', '#', 'button hide-on-mobile')
+            img.show-on-mobile(src="./img/shop-now.svg", alt="")
