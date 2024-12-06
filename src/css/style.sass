@@ -14,6 +14,10 @@ body
   width: 1800px
   margin: 0 auto
 
+=x2()
+  @media screen and ( min-resolution: 192dpi  )
+    @content
+  
 h1
   +font($roboto-flex, 84px)
   color: $brown
@@ -38,6 +42,8 @@ h1
 .hero
   background-image: url('../img/hero.jpg')
   height: 902px
+  +x2
+    background-image: url('../img/hero@2x.jpg')
 
 .info
   gap: 80px
