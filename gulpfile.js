@@ -12,24 +12,24 @@ import mozjpeg from 'imagemin-mozjpeg';
 import pngquant from 'imagemin-pngquant';
 
 const path = {
-    dest: 'pages',
+    dest: 'docs',
     pug: {
         src: 'src/*.pug',
-        dest: 'pages/',
+        dest: 'docs/',
         watch: 'src/**/*.pug'
     },
     sass: {
         src: 'src/css/*.{sass,css,scss}',
-        dest: 'pages/css',
+        dest: 'docs/css',
         watch: 'src/css/**/*.{sass,css,scss}'
     },
     img: {
         src: 'src/img/**/*.{jpg,jpeg,png,svg,gif,webp}',
-        dest: 'pages/img'
+        dest: 'docs/img'
     },
     js: {
         src: 'src/js/**/*.js',
-        dest: 'pages/js'
+        dest: 'docs/js'
     }
 };
 
@@ -87,12 +87,12 @@ function jsTask() {
         .pipe(browserSync.stream());
 }
 
-const clean = () => deleteAsync(['pages/**', '!pages']);
+const clean = () => deleteAsync(['docs/**', '!docs']);
 
 function watchTask() {
     browserSync.init({
         server: {
-            baseDir: 'pages',
+            baseDir: 'docs',
             injectChanges: true
         }
     });
