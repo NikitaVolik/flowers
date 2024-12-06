@@ -18,7 +18,10 @@ html(lang="en")
         section.hero
             h1 Купи цветы<br> у нас<br> <b>прямо cейчас!</b>
         section.info.container.flex.space-between.align-center
-            img(src="./img/woman-and-flowers.jpg", srcset='./img/woman-and-flowers.jpg 1x, ./img/woman-and-flowers@2x.jpg 2x', alt="")
+            picture 
+                source(media="(min-width: 1400px)", srcset="./img/woman-and-flowers.jpg 1x, ./img/woman-and-flowers@2x.jpg 2x")
+                source(media="(min-width: 1200px)", srcset="./img/woman-and-flowers-1200.jpg 1x, ./img/woman-and-flowers-1200@2x.jpg 2x")
+                img(src="./img/woman-and-flowers.jpg", alt="")
             .description.column
                 p Добро пожаловать в наш цветочный магазин! Мы рады предложить вам широкий ассортимент свежих и изысканных цветов, которые станут идеальным подарком для любого случая. У нас вы найдете как классические букеты, так и уникальные композиции, созданные нашими профессиональными флористами с любовью и вниманием к деталям.
                 
