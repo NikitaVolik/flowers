@@ -13,6 +13,8 @@ body
   +font($inter, 24px)
   width: 1800px
   margin: 0 auto
+  +desktop-xl
+    width: 1400px
 
 =x2
   @media screen and ( min-resolution: 192dpi )
@@ -44,9 +46,16 @@ h1
   height: 902px
   +x2
     background-image: url('../img/hero@2x.jpg')
+  +desktop-xl
+    background-image: url('../img/hero-1200.jpg')
+    +x2
+      background-image: url('../img/hero-1200@2x.jpg')
 
 .info
   gap: 80px
   padding: 80px 0
+  img
+    float: left
+    margin: 0 20px 20px 0
   .description
     gap: 28px
